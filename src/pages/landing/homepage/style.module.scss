@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111111;
+}
+
+.Wrapper {
+    background-color: #111111;
+}
+
+.BannerSection {
+    height: 520px;
+    padding: 0px 9rem 0px 9rem;
+}
+
+.Container {
+    max-width: 1100px;
+    height: 100%;
+
+    margin: auto;
+}
+
+.BannerContent {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.BannerLeft {
+    width: 60%;
+    height: 100%;
+    padding-top: 6rem;
+    z-index: 4;
+    font-family: 'Urbanist';
+    color: #FFBB55;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+
+    h2 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    h1 {
+        font-size: 42px;
+
+    }
+
+    h1 span {
+        font-family: 'Praise';
+        font-size: 72px;
+        color: #FFA51E;
+    }
+
+    .BannerBtn {
+        padding-top: 1rem;
+    }
+
+    .BannerBtn button {
+        background-image: linear-gradient(#FFB23F 100%,
+                #FFA723 100%,
+                #FFC977 100%,
+                #EA9C27 100%);
+        height: 52px;
+        width: 250px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #623F0B;
+    }
+
+    .EclipseLeft {
+        position: absolute;
+        top: 0px;
+        left: -100px;
+        z-index: -1;
+
+    }
+
+    .EclipseRight {
+        position: absolute;
+        top: 0px;
+        left: 100px;
+        z-index: -1;
+        transition: left 0.5s;
+
+    }
+
+
+}
+
+.BannetRight {
+    width: 40%;
+
+    .BannerImage1,
+    .BannerImage2 {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .BannerImage1 {
+        z-index: 2;
+    }
+
+    .BannerImage2 {
+        z-index: 1;
+        filter: blur(0px);
+        transition: filter 0.5s ease, transform 0.5s ease;
+        ;
+        position: absolute;
+        right: 10px;
+    }
+
+    .BannerImage1:hover+.BannerImage2 {
+        filter: blur(5px);
+        transform: rotate(-16deg);
+
+    }
+}
+
+.SectionBottom {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// ===============================MainSection============================
+.MainSection {
+    height: 507px;
+    background-color: #080808;
+
+}
+
+.MainContent {
+    max-width: 1440px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+.MainEclipse {
+    position: absolute;
+}
+
+.Partners {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    h1 {
+        font-size: 48px;
+        line-height: 57px;
+        font-weight: 400;
+        font-family: 'Praise';
+        color: #FFA51E;
+
+    }
+
+    .PartnerCollection {
+        position: relative;
+        background-image: url('../../../assets//vector/partner-collection.svg');
+        height: 70%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 1;
+    }
+
+}
+
+.PartnerRoyal {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.4;
+
+}
+
+// =============================aboutUsSection============================================
+.AboutUsSection {
+    height: 384px;
+    padding: 18px;
+    position: relative;
+
+}
+
+.AboutUsContent {
+    background-image: url('../../../assets/vector/aboutus-back.svg');
+    height: 100%;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutUsSperator {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.AboutUsHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: 'praise';
+    color: #FFA51E;
+
+}
+
+
+
+.topLeftCorner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.topRightCorner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.AboutUsBottom {
+
+
+    p {
+        color: #FFA723;
+        font-size: 24px;
+        font-weight: 400;
+       padding: 2rem;
+        margin: auto;
+        text-align: center;
+        font-family: 'urbanist';
+
+    }
+}
