@@ -14,6 +14,7 @@ import PartnerRoyal from '../../../assets/vector/partner-royal.svg'
 import AboutLeftCorner from '../../../assets/vector/header-left-corner.svg'
 import AboutRightCorner from '../../../assets/vector/header-right-corner.svg'
 import HeadingBar from '../../../assets/vector/heading-bar.svg'
+import Footer from '../../../components/common/footer/Footer';
 
 function Homepage(props) {
     return (
@@ -55,7 +56,7 @@ function Homepage(props) {
 
                             <h1>Our proud partners</h1>
                             <div className={Styles.PartnerCollection}>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -78,14 +79,14 @@ function Homepage(props) {
                             <img src={HeadingBar} className={Styles.HeadingBar} />
 
                         </div>
-                        
+
                         <div className={Styles.AboutUsBottom}>
                             <p>AAA Consulting is a leading Online Reputation Management and Digital Marketing company based in Delhi, India. With the team of Best Digital Marketing professionals, We help the companies to build, repair, manage and promote the Clients.</p>
                         </div>
                     </div>
                 </div>
             </section>
-
+            <Footer />
         </div>
     );
 }
