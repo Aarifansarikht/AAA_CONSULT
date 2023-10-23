@@ -9,9 +9,24 @@
     
 }
 .FooterContent{
+    position: relative;
     height: 100%;
     width: 100%;
    background-image: url('../../../assets/vector/aboutus-back.svg');
-  
-
+}
+.FooterLeftCorner{
+position: absolute;
+bottom: 0px;
+left: 0px;
+}
+.FooterRightCorner{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.FooterMain{
+    background-image: url('../../../assets//vector/footer-back.svg');
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
