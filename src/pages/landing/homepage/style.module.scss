@@ -169,7 +169,7 @@ body {
         font-weight: 400;
         font-family: 'Praise';
         color: #FFA51E;
-        
+
 
     }
 
@@ -199,6 +199,12 @@ body {
     padding: 18px;
     position: relative;
 
+}
+
+.AboutUsContainer {
+    max-width: 1400px;
+    margin: auto;
+    height: 100%;
 }
 
 .AboutUsContent {
@@ -255,10 +261,62 @@ body {
         color: #FFA723;
         font-size: 24px;
         font-weight: 400;
-       padding: 2rem;
+        padding: 2rem;
         margin: auto;
         text-align: center;
         font-family: 'urbanist';
 
     }
+}
+
+// ============================OurServices==================================
+
+.OurServiceSection {
+    height: 772px;
+    width: 100%;
+    .ServiceSperator{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+}
+
+.OurServicesContent {
+    height: 100%;
+    max-width: 1400px;
+
+    background-image: url('../../../assets/vector/service-back.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: auto;
+    padding: 5rem;
+
+}
+
+.Container {
+
+    h1 {
+        color: #FFA51E;
+        font-size: 48px;
+        font-family: 'praise';
+    }
+}
+
+.ServiceCard {
+    height: 417px;
+    margin-top: 2rem;
+  
+}
+// =========================================whoe we are=====================================
+.WhoWeAreSection{
+height: 473px;
+background-image: url('../../../assets/whoweback.svg');
+background-repeat: no-repeat;
+}
+.WhoWeAreContent{
+   p{
+    color: #FFA51E;
+   }
 }

@@ -1,32 +1,203 @@
-.FooterSection{
-    height: 612px;
-   border-bottom: 4rem solid black;
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+* {
+    font-family: 'urbanist';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-.Container{
+
+.FooterSection {
+    height: 750px;
+    padding: 20px;
+}
+
+.Container {
     max-width: 1440px;
     margin: auto;
     height: 100%;
-    
+
 }
-.FooterContent{
+
+.FooterContent {
     position: relative;
     height: 100%;
-    width: 100%;
-   background-image: url('../../../assets/vector/aboutus-back.svg');
+    max-width: 1400px;
+    margin: auto;
+    background-image: url('../../../assets/vector/aboutus-back.svg');
 }
-.FooterLeftCorner{
-position: absolute;
-bottom: 0px;
-left: 0px;
+
+.FooterLeftCorner {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
-.FooterRightCorner{
+
+.FooterRightCorner {
     position: absolute;
     bottom: 0px;
     right: 0px;
 }
-.FooterMain{
+
+.FooterMain {
     background-image: url('../../../assets//vector/footer-back.svg');
     height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+    background-position: bottom;
+    max-width: 1100px;
+
+
+}
+
+.FooterTop {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.FooterBottom {
+    height: 50%;
+}
+
+.FooterHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .SocialIcon {
+        display: flex;
+        gap: 1.6rem;
+
+    }
+}
+
+.FooterHeadBottom {
+    display: flex;
+
+    .HeadBottomLeft {
+        width: 50%;
+
+        p {
+            width: 70%;
+
+            color: #AB8750;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+        }
+    }
+
+    .HeadBottomRight {
+        width: 50%;
+    }
+
+    .HeadBottomRight {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-end;
+        gap: 1rem;
+
+        form {
+            width: 100%;
+        }
+
+        .FormContainer {
+            width: 100%;
+            background: linear-gradient(#FFB23F 100%,
+                    #FFA723 100%,
+                    #FFC977 100%,
+                    #EA9C27 100%);
+            padding: 0.2rem;
+            display: flex;
+            gap: 0.2rem;
+            border-radius: 2px;
+
+            input {
+                width: 70%;
+                padding: 0.7rem;
+                background-color: #111111;
+            }
+
+            input::placeholder {
+                font-size: 20px;
+                font-weight: 400;
+                color: #623F0B;
+                font-family: 'urbanist';
+            }
+
+            button {
+                width: 29%;
+                background-color: #FFB23F;
+                color: #623F0B;
+                font-size: 24px;
+                font-weight: 700;
+                border: none;
+            }
+        }
+
+        .Address {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+
+            p {
+                display: flex;
+                color: #AB8750;
+                margin: 0px;
+                flex-direction: column;
+                span{
+                    color: #FFB23F;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.FooterBottom {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        color: #FFA723;
+        font-size: 48px;
+        font-weight: 400px;
+        font-family: 'praise';
+    }
+}
+
+.ListItems {
+    display: flex;
+
+    .LeftList {
+        width: 50%;
+
+    }
+
+    .RightList {
+        width: 50%;
+
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        list-style: none;
+        padding: 0px;
+        li a{
+            color: #FFA51E;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            font-family: 'urbanist';
+
+        }
+    }
+
 }

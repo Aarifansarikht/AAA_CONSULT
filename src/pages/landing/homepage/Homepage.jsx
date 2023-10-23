@@ -15,7 +15,16 @@ import AboutLeftCorner from '../../../assets/vector/header-left-corner.svg'
 import AboutRightCorner from '../../../assets/vector/header-right-corner.svg'
 import HeadingBar from '../../../assets/vector/heading-bar.svg'
 import Footer from '../../../components/common/footer/Footer';
+import OurServiceBack from '../../../assets/vector/service-back.svg';
+import ServiceImg1 from '../../../assets/ServiceImages/serviceimg1.svg'
+import ServiceImg2 from '../../../assets/ServiceImages/serviceimg2.svg'
+import ServiceImg3 from '../../../assets/ServiceImages/serviceimg3.svg'
+import ServiceImg4 from '../../../assets/ServiceImages/serviceimg4.svg'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'
+import { Autoplay, } from 'swiper/modules';
+import ServiceCard from '../../../components/common/ServiceCard/ServiceCard';
 function Homepage(props) {
     return (
         <div className={Styles.Wrapper}>
@@ -66,26 +75,98 @@ function Homepage(props) {
             <section className={Styles.AboutUsSection}>
                 <img src={Sperator} className={Styles.AboutUsSperator} />
 
-                <div className={Styles.Container}>
+                <div className={Styles.AboutUsContainer}>
+
                     <div className={Styles.AboutUsContent}>
 
                         <img src={AboutLeftCorner} className={Styles.topLeftCorner} />
                         <img src={AboutRightCorner} className={Styles.topRightCorner} />
+                        <div className={Styles.Container}>
 
-                        <div className={Styles.AboutUsHeading}>
-                            <h1>
-                                About Us
-                            </h1>
-                            <img src={HeadingBar} className={Styles.HeadingBar} />
 
-                        </div>
+                            <div className={Styles.AboutUsHeading}>
+                                <h1>
+                                    About Us
+                                </h1>
+                                <img src={HeadingBar} className={Styles.HeadingBar} />
 
-                        <div className={Styles.AboutUsBottom}>
-                            <p>AAA Consulting is a leading Online Reputation Management and Digital Marketing company based in Delhi, India. With the team of Best Digital Marketing professionals, We help the companies to build, repair, manage and promote the Clients.</p>
+                            </div>
+
+                            <div className={Styles.AboutUsBottom}>
+                                <p>AAA Consulting is a leading Online Reputation Management and Digital Marketing company based in Delhi, India. With the team of Best Digital Marketing professionals, We help the companies to build, repair, manage and promote the Clients.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            <section className={Styles.OurServiceSection}>
+                <img src={Sperator} className={Styles.ServiceSperator}/>
+                <div className={Styles.OurServicesContent}>
+
+                    <div className={Styles.Container}>
+                        <h1>Our Services</h1>
+                        <div className={Styles.ServiceCard}>
+                            <Swiper
+                                spaceBetween={20}
+                                slidesPerView={1}
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+
+                                breakpoints={{
+                                    680: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                    },
+                                    1400: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 20,
+                                    },
+                                }}
+                                modules={[Autoplay]}
+                                loop
+
+                            >
+                                <SwiperSlide>
+                                    <ServiceCard image={ServiceImg1} label={"Software Development"}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ServiceCard image={ServiceImg2} label={"Digital Marketing"}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ServiceCard image={ServiceImg3} label={"AI-Powered Data Insight"}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ServiceCard image={ServiceImg4} label={"Intelligent Diagnose"}/>
+                                </SwiperSlide>
+
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div className={Styles.WhoWeAreSection}>
+                <div className={Styles.Container}>
+
+                 <h1>Who we are?</h1>
+                 <div className={Styles.WhoWeAreContent}>
+                       <p>Welcome to AAA Consulting – where expertise and innovation unite! We're a leading tech-powered consulting firm with specialists in Reputation Management, SEO, Digital Marketing, and PR. Dedicated to customized solutions, we help businesses thrive online through strategic insights, security management, and expert threat handling. Join us for a transformative journey to success!</p>
+                       <button>Get Quote</button>
+                 </div>
+                </div>
+            </div>
             <Footer />
         </div>
     );
