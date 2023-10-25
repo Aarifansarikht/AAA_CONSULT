@@ -1,322 +1,372 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Praise&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Praise&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #111111;
+  background-color: #111111;
 }
 
 .Wrapper {
-    background-color: #111111;
+  background-color: #111111;
 }
 
 .BannerSection {
-    height: 520px;
-    padding: 0px 9rem 0px 9rem;
-}
+  height: 520px;
+  padding: 0px 9rem 0px 9rem;
+  position: relative;
 
-.Container {
-    max-width: 1100px;
-    height: 100%;
-
-    margin: auto;
-}
-
-.BannerContent {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.BannerLeft {
-    width: 60%;
-    height: 100%;
-    padding-top: 6rem;
-    z-index: 4;
-    font-family: 'Urbanist';
-    color: #FFBB55;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
+  .EclipseLeft {
     position: absolute;
-    z-index: 3;
+    top: 0px;
+    left: -50px;
+  }
 
-    h2 {
-        font-size: 32px;
-        line-height: 1.3;
-    }
+  .EclipseRight {
+    position: absolute;
+    top: 0px;
+    left: 200px;
 
-    h1 {
-        font-size: 42px;
-
-    }
-
-    h1 span {
-        font-family: 'Praise';
-        font-size: 72px;
-        color: #FFA51E;
-    }
-
-    .BannerBtn {
-        padding-top: 1rem;
-    }
-
-    .BannerBtn button {
-        background-image: linear-gradient(#FFB23F 100%,
-                #FFA723 100%,
-                #FFC977 100%,
-                #EA9C27 100%);
-        height: 52px;
-        width: 250px;
-        font-size: 24px;
-        font-weight: 700;
-        color: #623F0B;
-    }
-
-    .EclipseLeft {
-        position: absolute;
-        top: 0px;
-        left: -100px;
-        z-index: -1;
-
-    }
-
-    .EclipseRight {
-        position: absolute;
-        top: 0px;
-        left: 100px;
-        z-index: -1;
-        transition: left 0.5s;
-
-    }
-
-
-}
-
-.BannetRight {
-    width: 40%;
+    transition: left 0.5s;
+  }
+  .BannerImageContainer {
+    position: absolute;
+    right: 60px;
+    bottom: 0px;
 
     .BannerImage1,
     .BannerImage2 {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
     }
 
     .BannerImage1 {
-        z-index: 2;
+      z-index: 2;
     }
 
     .BannerImage2 {
-        z-index: 1;
-        filter: blur(0px);
-        transition: filter 0.5s ease, transform 0.5s ease;
-        ;
-        position: absolute;
-        right: 10px;
+      z-index: 1;
+      filter: blur(0px);
+      transition: filter 0.5s ease, transform 0.5s ease;
+      position: absolute;
+      right: 10px;
     }
 
-    .BannerImage1:hover+.BannerImage2 {
-        filter: blur(5px);
-        transform: rotate(-16deg);
-
+    .BannerImage1:hover + .BannerImage2 {
+      filter: blur(5px);
+      transform: rotate(-16deg);
     }
+  }
+}
+
+.Container {
+  max-width: 1100px;
+  height: 100%;
+
+  margin: auto;
+}
+
+.BannerContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.BannerLeft {
+  width: 60%;
+  height: 100%;
+  padding-top: 6rem;
+  z-index: 4;
+  font-family: "Urbanist";
+  color: #ffbb55;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h1 span {
+    font-family: "Praise";
+    font-size: 72px;
+    color: #ffa51e;
+  }
+
+  .BannerBtn {
+    padding-top: 1rem;
+  }
+
+  .BannerBtn button {
+    background-image: linear-gradient(
+      #ffb23f 100%,
+      #ffa723 100%,
+      #ffc977 100%,
+      #ea9c27 100%
+    );
+    height: 52px;
+    width: 250px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #623f0b;
+  }
+}
+
+.BannetRight {
+  width: 40%;
 }
 
 .SectionBottom {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 // ===============================MainSection============================
 .MainSection {
-    height: 507px;
-    background-color: #080808;
-
+  height: 507px;
+  background-color: #080808;
 }
 
 .MainContent {
-    max-width: 1440px;
-    margin: auto;
-    height: 100%;
-    position: relative;
+  max-width: 1440px;
+  margin: auto;
+  height: 100%;
+  position: relative;
 }
 
 .MainEclipse {
-    position: absolute;
+  position: absolute;
 }
 
 .Partners {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 
-    h1 {
-        font-size: 48px;
-        line-height: 57px;
-        font-weight: 400;
-        font-family: 'Praise';
-        color: #FFA51E;
+  h1 {
+    font-size: 48px;
+    line-height: 57px;
+    font-weight: 400;
+    font-family: "Praise";
+    color: #ffa51e;
+  }
 
-
-    }
-
-    .PartnerCollection {
-        position: relative;
-        background-image: url('../../../assets//vector/partner-collection.svg');
-        height: 70%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        z-index: 1;
-    }
-
+  .PartnerCollection {
+    position: relative;
+    background-image: url("../../../assets//vector/partner-collection.svg");
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
 }
 
 .PartnerRoyal {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.4;
-
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.4;
 }
 
 // =============================aboutUsSection============================================
 .AboutUsSection {
-    height: 384px;
-    padding: 18px;
-    position: relative;
-
+  height: 384px;
+  padding: 18px;
+  position: relative;
 }
 
 .AboutUsContainer {
-    max-width: 1400px;
-    margin: auto;
-    height: 100%;
+  max-width: 1400px;
+  margin: auto;
+  height: 100%;
 }
 
 .AboutUsContent {
-    background-image: url('../../../assets/vector/aboutus-back.svg');
-    height: 100%;
-    background-size: contain;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-image: url("../../../assets/vector/aboutus-back.svg");
+  height: 100%;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .AboutUsSperator {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-
 
 .AboutUsHeading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 2rem;
-    font-size: 48px;
-    font-weight: 400;
-    font-family: 'praise';
-    color: #FFA51E;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  font-size: 48px;
+  font-weight: 400;
+  font-family: "praise";
+  color: #ffa51e;
 }
 
-
-
 .topLeftCorner {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 .topRightCorner {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .AboutUsBottom {
-
-
-    p {
-        color: #FFA723;
-        font-size: 24px;
-        font-weight: 400;
-        padding: 2rem;
-        margin: auto;
-        text-align: center;
-        font-family: 'urbanist';
-
-    }
+  p {
+    color: #ffa723;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+    font-family: "urbanist";
+  }
 }
 
 // ============================OurServices==================================
 
 .OurServiceSection {
-    height: 772px;
-    width: 100%;
-    .ServiceSperator{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-
+  height: 772px;
+  width: 100%;
+  .ServiceSperator {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .OurServicesContent {
-    height: 100%;
-    max-width: 1400px;
+  height: 100%;
+  max-width: 1400px;
 
-    background-image: url('../../../assets/vector/service-back.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    margin: auto;
-    padding: 5rem;
-
+  background-image: url("../../../assets/vector/service-back.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: auto;
+  padding: 5rem;
 }
 
 .Container {
-
-    h1 {
-        color: #FFA51E;
-        font-size: 48px;
-        font-family: 'praise';
-    }
+  h1 {
+    color: #ffa51e;
+    font-size: 48px;
+    font-family: "praise";
+  }
 }
 
 .ServiceCard {
-    height: 417px;
-    margin-top: 2rem;
-  
+  height: 417px;
+  margin-top: 2rem;
 }
 // =========================================whoe we are=====================================
-.WhoWeAreSection{
-height: 473px;
-background-image: url('../../../assets/whoweback.svg');
-background-repeat: no-repeat;
+.WhoWeAreSection {
+  height: 473px;
+  background-image: url("../../../assets/whoweback.svg");
+  background-repeat: no-repeat;
+  .Container {
+    display: flex;
+  }
+  .BigRoyalFlower {
+    position: absolute;
+    left: 0px;
+  }
+
+  .LeftContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    p {
+      color: #ffa51e;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28.8px;
+    }
+  }
+  .LeftContainer::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Adjust this value to control the height of the border */
+    left: 0;
+    width: 50%; /* Adjust this value to control the width of the border (half of the container's width) */
+    border-bottom: 2px solid #ffa51e;
+  }
+  .RightContainer {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 250px;
+      height: 52px;
+      background-image: linear-gradient(
+        #ffb23f 100%,
+        #ffa723 100%,
+        #ffc977 100%,
+        #ea9c27 100%
+      );
+      font-size: 24px;
+      font-weight: 700;
+      color: #623f0b;
+      border: none;
+    }
+  }
+  .RightContainer::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Adjust this value to control the height of the border */
+    left: 3rem;
+    width: 60%; /* Adjust this value to control the width of the border (half of the container's width) */
+    border-bottom: 2px solid #ffa51e;
+  }
 }
-.WhoWeAreContent{
-   p{
-    color: #FFA51E;
-   }
+
+.TrustSection {
+  padding: 4rem;
+}
+.TrustTop {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.TrustBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }

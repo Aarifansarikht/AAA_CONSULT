@@ -1,0 +1,44 @@
+* {
+  font-family: "urbanist";
+}
+.TrustSectionContainer {
+  display: flex;
+  gap: 4rem;
+  padding-top: 3rem;
+}
+.TrustImg {
+  width: 336px;
+  height: 330px;
+  position: relative;
+  z-index: 3;
+
+  .TrustCurve {
+    position: absolute;
+    top: 250px;
+    left: 160px;
+    z-index: 2;
+  }
+  .TrustRightCurve {
+    position: absolute;
+    top: 240px;
+    right: 160px;
+    z-index: 1;
+  }
+}
+.TrustTypography {
+  display: flex;
+  flex-direction: column;
+  color: #ffc977;
+  padding-right: 4rem;
+  z-index: 3;
+  gap: 1rem;
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+  }
+}
